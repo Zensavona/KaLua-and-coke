@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Emulator.ClassMaps.DeletedPlayer, Emulator" table="DeletedPlayers">
+		<id name="DeleteId" column="DeleteId" length="11">
+			<generator class="native" />
+		</id>
+		<property name="PlayerId" column="PlayerId" type="Int32" length="11" />
+		<property name="UserId" column="UserId" type="Int32" length="11" />
+		<property name="DeletedDate" column="DeletedDate" type="DateTime" />
+	</class>
+</hibernate-mapping>

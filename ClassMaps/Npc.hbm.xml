@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Emulator.ClassMaps.Npc, Emulator" table="Npcs">
+		<id name="NpcId" column="NpcId" length="11">
+			<generator class="native" />
+		</id>
+		<property name="Hidden" column="Hidden" type="Int32" length="11" />
+		<property name="Kind" column="Kind" type="Int32" length="11" />
+		<property name="Shape" column="Shape" type="Int32" length="11" />
+		<property name="Talk" column="Talk" type="Int32" length="32" />
+		<property name="X" column="X" type="Int32" length="11" />
+		<property name="Y" column="Y" type="Int32" length="11" />
+		<property name="Z" column="Z" type="Int32" length="11" />
+		<property name="HX" column="HX" type="Int32" length="11" />
+		<property name="HY" column="HY" type="Int32" length="11" />
+	</class>
+</hibernate-mapping>

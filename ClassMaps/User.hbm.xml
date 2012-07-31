@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Emulator.ClassMaps.User, Emulator" table="Users">
+		<id name="UserId" column="UserId" length="11">
+			<generator class="native" />
+		</id>		
+		<property name="Username" column="Username" type="String" length="16" />
+		<property name="Password" column="Password" type="String" length="40" />
+		<property name="Email" column="Email" type="String" length="200" />
+	</class>
+</hibernate-mapping>

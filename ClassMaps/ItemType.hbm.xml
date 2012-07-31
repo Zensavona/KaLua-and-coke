@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Emulator.ClassMaps.ItemType, Emulator" table="ItemTypes">
+		<id name="ItemIndex" column="ItemIndex" length="11">
+			<generator class="assigned" />
+		</id>
+		<property name="Name" column="Name" type="String" length="250" />
+		<property name="Description" column="Description" type="String" length="250" />
+		<property name="Image" column="Image" type="String" length="32" />
+		<property name="Type" column="Type" type="String" length="32" />
+		<property name="SubType" column="SubType" type="String" length="32" />
+		<property name="Wear" column="Wear" type="Int32" length="11" />
+		<property name="Use" column="Use" type="Int32" length="11" />
+		<property name="Plural" column="Plural" type="Int32" length="11" />
+		<property name="LimitClass" column="LimitClass" type="Int32" length="11" />
+		<property name="LimitLevel" column="LimitLevel" type="Int32" length="11" />
+		<property name="Level" column="Level" type="Int32" length="11" />
+		<property name="Range" column="Range" type="Int32" length="11" />
+		<property name="Buy" column="Buy" type="Int32" length="11" />
+		<property name="Sell" column="Sell" type="Int32" length="11" />
+		<property name="CoolTime" column="CoolTime" type="Int32" length="11" />
+		<property name="MaxProtect" column="MaxProtect" type="Int32" length="11" />
+		<property name="Endurance" column="Endurance" type="Int32" length="11" />
+		<property name="BuffIndex" column="BuffIndex" type="Int32" length="11" />
+		<property name="BuffValue" column="BuffValue" type="Int32" length="11" />
+		<property name="Effect" column="Effect" type="Int32" length="11" />
+	</class>
+</hibernate-mapping>

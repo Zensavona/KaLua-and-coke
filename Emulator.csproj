@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12E87C7B-8CE5-446B-86F5-530E60376B7B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Emulator</RootNamespace>
+    <AssemblyName>Emulator</AssemblyName>
+    <StartupObject>Emulator.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LuaInterface, Version=1.5.3.0, Culture=neutral, PublicKeyToken=1e1fb15b02227b8a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\LuaInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.0.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Programmer\MySQL\MySQL Connector Net 5.0.7\Binaries\.NET 2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=1.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Programmer\NHibernate\bin\net-2.0\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Castle.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="CharacterStates\S_Rest.cs" />
+    <Compile Include="ClassMaps\DeletedPlayer.cs" />
+    <Compile Include="ClassMaps\PlayerItem.cs" />
+    <Compile Include="ClassMaps\Item.cs" />
+    <Compile Include="ClassMaps\ItemType.cs" />
+    <Compile Include="ClassMaps\Npc.cs" />
+    <Compile Include="ClassMaps\Player.cs" />
+    <Compile Include="ClassMaps\PlayerSkill.cs" />
+    <Compile Include="ClassMaps\User.cs" />
+    <Compile Include="Client.CreateCharacter.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Crypter.cs" />
+    <Compile Include="Drop.cs" />
+    <Compile Include="Forms\F_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\F_Main.Designer.cs">
+      <DependentUpon>F_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gear.cs" />
+    <Compile Include="Guild.cs" />
+    <Compile Include="ICharacterState.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="ISkill.cs" />
+    <Compile Include="Maps\M_WorldObject.cs" />
+    <Compile Include="Packets\P_AcceptChange.cs" />
+    <Compile Include="Packets\P_CameraUpdate.cs" />
+    <Compile Include="Packets\P_Chat.cs" />
+    <Compile Include="Packets\P_DeletedPlayerList.cs" />
+    <Compile Include="Packets\P_EquipItem.cs" />
+    <Compile Include="Packets\P_Exit.cs" />
+    <Compile Include="Packets\P_EndPlayerMove.cs" />
+    <Compile Include="Packets\P_GuildDummy.cs" />
+    <Compile Include="Packets\P_Init.cs" />
+    <Compile Include="Packets\P_LoginAccepted.cs" />
+    <Compile Include="Packets\P_LoginError.cs" />
+    <Compile Include="Packets\P_OpenDialog.cs" />
+    <Compile Include="Packets\P_PickupDrop.cs" />
+    <Compile Include="Packets\P_PlayerMove.cs" />
+    <Compile Include="Packets\P_PlayerInfo.cs" />
+    <Compile Include="Packets\P_PlayerList.cs" />
+    <Compile Include="Packets\P_SendInventory.cs" />
+    <Compile Include="Packets\P_SendSkills.cs" />
+    <Compile Include="Packets\P_SessionRequest.cs" />
+    <Compile Include="Packets\P_SetCamera.cs" />
+    <Compile Include="Packets\P_SkillExecute.cs" />
+    <Compile Include="Packets\P_SkillSet.cs" />
+    <Compile Include="Packets\P_SpawnDrop.cs" />
+    <Compile Include="Packets\P_SpawnMob.cs" />
+    <Compile Include="Packets\P_SpawnNPC.cs" />
+    <Compile Include="Packets\P_SpawnPlayer.cs" />
+    <Compile Include="Packets\P_StatPacket.cs" />
+    <Compile Include="Packets\P_UnequipItem.cs" />
+    <Compile Include="Packets\P_Unknown.cs" />
+    <Compile Include="Packets\P_Unknown2.cs" />
+    <Compile Include="Packets\P_Unspawn.cs" />
+    <Compile Include="Packets\P_UnspawnDrop.cs" />
+    <Compile Include="Packets\P_UpdateInventory.cs" />
+    <Compile Include="Packets\P_ValueChange.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerConsole.cs">
+    </Compile>
+    <Compile Include="Skills\Heal.cs" />
+    <Compile Include="Skills\Rest.cs" />
+    <Compile Include="SkillHandler.cs" />
+    <Compile Include="Thinker.cs" />
+    <Compile Include="Thought.cs" />
+    <Compile Include="PacketOut.cs" />
+    <Compile Include="PacketIn.cs" />
+    <Compile Include="TranslatorHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="ClassMaps\Skill.cs" />
+    <Compile Include="Translators\PT_Attack.cs" />
+    <Compile Include="Translators\PT_Bank.cs" />
+    <Compile Include="Translators\PT_Buff.cs" />
+    <Compile Include="Translators\PT_CallProcess.cs" />
+    <Compile Include="Translators\PT_CastleInfo.cs" />
+    <Compile Include="Translators\PT_Enchanting.cs" />
+    <Compile Include="Translators\PT_Events.cs" />
+    <Compile Include="Translators\PT_Friendslist.cs" />
+    <Compile Include="Translators\PT_Guild.cs" />
+    <Compile Include="Translators\PT_Mail.cs" />
+    <Compile Include="Translators\PT_Party.cs" />
+    <Compile Include="Translators\PT_PlayerShop.cs" />
+    <Compile Include="Translators\PT_PlayersInSight.cs" />
+    <Compile Include="Translators\PT_Character.cs" />
+    <Compile Include="Translators\PT_Chat.cs" />
+    <Compile Include="Translators\PT_Dummy.cs" />
+    <Compile Include="Translators\PT_Item.cs" />
+    <Compile Include="Translators\PT_Exit.cs" />
+    <Compile Include="Translators\PT_ClientVersion.cs" />
+    <Compile Include="Translators\PT_DumpUnknown.cs" />
+    <Compile Include="Translators\PT_Movement.cs" />
+    <Compile Include="Translators\PT_Init.cs" />
+    <Compile Include="Translators\PT_Login.cs" />
+    <Compile Include="Translators\PT_PlayerAction.cs" />
+    <Compile Include="Translators\PT_PlayerTeleportScroll.cs" />
+    <Compile Include="Translators\PT_PvP.cs" />
+    <Compile Include="Translators\PT_Revive.cs" />
+    <Compile Include="Translators\PT_SessionRequest.cs" />
+    <Compile Include="Translators\PT_Stats.cs" />
+    <Compile Include="Translators\PT_SiegeGun.cs" />
+    <Compile Include="Translators\PT_Skill.cs" />
+    <Compile Include="Translators\PT_PlayerSpawn.cs" />
+    <Compile Include="Translators\PT_Npc.cs" />
+    <Compile Include="Translators\PT_SpecialItem.cs" />
+    <Compile Include="Translators\PT_Teleport.cs" />
+    <Compile Include="Translators\PT_Trade.cs" />
+    <Compile Include="Translators\PT_Transform.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="World.cs" />
+    <Compile Include="Maps\M_Map.cs" />
+    <Compile Include="Maps\M_Zone.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ClassMaps\PlayerItem.hbm.xml" />
+    <EmbeddedResource Include="ClassMaps\ItemType.hbm.xml" />
+    <EmbeddedResource Include="ClassMaps\Npc.hbm.xml" />
+    <EmbeddedResource Include="ClassMaps\Player.hbm.xml" />
+    <EmbeddedResource Include="ClassMaps\User.hbm.xml" />
+    <EmbeddedResource Include="Forms\F_Main.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ClassMaps\PlayerSkill.hbm.xml" />
+    <EmbeddedResource Include="ClassMaps\Item.hbm.xml" />
+    <EmbeddedResource Include="ClassMaps\DeletedPlayer.hbm.xml" />
+    <Content Include="ClassMaps\Skill.xml" />
+    <Content Include="Config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lua51.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="luanet.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MySql.Data.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

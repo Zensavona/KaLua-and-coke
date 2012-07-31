@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Emulator.ClassMaps.Player, Emulator" table="Players">
+		<id name="PlayerId" column="PlayerId" length="11">
+			<generator class="native" />
+		</id>
+		<property name="Status" column="Status" type="Int32" length="11" />
+		<property name="UserId" column="UserId" type="Int32" length="11" />
+		<property name="Name" column="Name" type="String" length="32" />
+		<property name="ClassId" column="ClassId" type="Int32" length="11" />
+		<property name="Level" column="Level" type="Int32" length="11" />
+		<property name="Job" column="Job" type="Int32" length="11" />
+		<property name="Strength" column="Strength" type="Int32" length="11" />
+		<property name="Health" column="Health" type="Int32" length="11" />
+		<property name="Intelligence" column="Intelligence" type="Int32" length="11" />
+		<property name="Wisdom" column="Wisdom" type="Int32" length="11" />
+		<property name="Agility" column="Agility" type="Int32" length="11" />
+		<property name="Face" column="Face" type="Int32" length="11" />
+		<property name="Hair" column="Hair" type="Int32" length="11" />
+		<property name="Experience" column="Experience" type="long" length="11" />
+		<property name="HP" column="HP" type="Int32" length="11" />
+		<property name="MP" column="MP" type="Int32" length="11" />
+		<property name="X" column="X" type="Int32" length="11" />
+		<property name="Y" column="Y" type="Int32" length="11" />
+		<property name="Z" column="Z" type="Int32" length="11" />
+		<property name="StatPoints" column="StatPoints" type="Int32" length="11" />
+		<property name="SkillPoints" column="SkillPoints" type="Int32" length="11" />
+		<property name="Contribution" column="Contribution" type="Int32" length="11" />
+		<property name="Rage" column="Rage" type="Int32" length="11" />
+	</class>
+</hibernate-mapping>

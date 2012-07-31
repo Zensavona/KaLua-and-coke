@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Emulator.ClassMaps.PlayerSkill, Emulator" table="PlayerSkills">
+		<id name="PlayerSkillId" column="PlayerSkillId" length="11">
+			<generator class="native" />
+		</id>
+		<property name="PlayerId" column="PlayerId" type="Int32" length="11" />
+		<property name="SkillIndex" column="SkillIndex" type="Int32" length="11" />
+		<property name="Level" column="Level" type="Int32" length="11" />
+	</class>
+</hibernate-mapping>

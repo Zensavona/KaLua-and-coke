@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Emulator.ClassMaps.Item, Emulator" table="Npcs">
+		<id name="SkillId" column="SkillId" length="11">
+			<generator class="native" />
+		</id>
+		<property name="ClassId" column="Class" type="Int32" length="11" />
+		<property name="Redistribute" column="Redistribute" type="Int32" length="11" />
+		<property name="LimitLevel" column="LimitLevel" type="String" length="32" />
+		<property name="LimitJob" column="LimitJob" type="Int32" length="11" />
+		<property name="LimitSkill" column="LimitSkill" type="Int32" length="11" />
+		<property name="LimitSkillLevel" column="LimitSkillLevel" type="Int32" length="11" />
+		<property name="MaxLevel" column="MaxLevel" type="Int32" length="11" />
+		<property name="MP" column="MP" type="Int32" length="11" />
+		<property name="LastTime" column="LastTime" type="Int32" length="11" />
+		<property name="DelayIn" column="DelayIn" type="Int32" length="11" />
+		<property name="DelayOut" column="DelayOut" type="Int32" length="11" />
+		<property name="DelayOther" column="DelayOther" type="Int32" length="11" />
+		<property name="Value1" column="Value1" type="String" length="500" />
+		<property name="Value2" column="Value2" type="String" length="500" />
+	</class>
+</hibernate-mapping>

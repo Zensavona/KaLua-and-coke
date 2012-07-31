@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Emulator.ClassMaps.PlayerItem, Emulator" table="PlayerItems">
+		<id name="ItemId" column="ItemId" length="11">
+			<generator class="native" />
+		</id>
+		<property name="PlayerId" column="PlayerId" type="Int32" length="11" />
+		<property name="ItemIndex" column="ItemIndex" type="Int32" length="11" />
+		<property name="ItemType" column="ItemType" type="Int32" length="11" />
+		<property name="Quantity" column="Quantity" type="Int32" length="11" />
+		<property name="Prefix" column="Prefix" type="Int32" length="11" />
+		<property name="Info" column="Info" type="Int32" length="11" />
+		<property name="MaxEndurance" column="MaxEndurance" type="Int32" length="11" />
+		<property name="CurEndurance" column="Endurance" type="Int32" length="11" />
+		<property name="Attack" column="Attack" type="Int32" length="11" />
+		<property name="Magic" column="Magic" type="Int32" length="11" />
+		<property name="Defense" column="Defense" type="Int32" length="11" />
+		<property name="OTP" column="OTP" type="Int32" length="11" />
+		<property name="Evade" column="Evade" type="Int32" length="11" />
+		<property name="Protect" column="Protect" type="Int32" length="11" />
+		<property name="EBLevel" column="EBLevel" type="Int32" length="11" />
+		<property name="EBRate" column="EBRate" type="Int32" length="11" />
+	</class>
+</hibernate-mapping>
